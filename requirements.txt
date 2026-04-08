@@ -5,3 +5,19 @@ scikit-learn
 tensorflow
 joblib
 plotly
+
+# Milestone 2 — agent pipeline
+langgraph
+langchain-core
+langchain-groq
+
+# RAG
+sentence-transformers
+faiss-cpu
+
+# PDF export
+reportlab
+kaleido
+
+# Environment
+python-dotenv
