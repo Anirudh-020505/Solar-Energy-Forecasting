@@ -1,0 +1,27 @@
+# Team planning docs
+TEAM_DIVISION.md
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# macOS
+.DS_Store
+
+# Model artifacts (large binaries — tracked via Git LFS or stored externally)
+# backend/models/*.h5
+# backend/models/*.pkl
