@@ -64,7 +64,7 @@ def _battery_sidebar() -> dict:
 
 def _soc_chart(schedule: list[dict]) -> go.Figure:
     hours     = [r.get("hour", i) for i, r in enumerate(schedule)]
-    soc       = [r.get("soc_end_kwh", 0) for r in schedule]
+    soc       = [r.get("soc_kwh", 0) for r in schedule]
     charge    = [r.get("charge_kw", 0) for r in schedule]
     discharge = [-r.get("discharge_kw", 0) for r in schedule]
 
