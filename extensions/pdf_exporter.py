@@ -312,6 +312,11 @@ def _forecast_summary_section(
         elements.append(Spacer(1, 0.3 * cm))
         elements.append(Paragraph("Hourly Forecast Profile", styles["sub_heading"]))
         elements.append(_png_to_image_flowable(png))
+    else:
+        elements.append(Paragraph(
+            "Chart omitted (plotly/kaleido unavailable in current runtime).",
+            styles["small"],
+        ))
     elements.append(PageBreak())
 
 
@@ -439,8 +444,8 @@ def _battery_section(
                 f"{row.get('solar_kw', 0):.1f}",
                 f"{row.get('charge_kw', 0):.1f}",
                 f"{row.get('discharge_kw', 0):.1f}",
-                f"{row.get('export_kw', 0):.1f}",
-                f"{row.get('soc_end_kwh', 0):.1f}",
+                f"{row.get('grid_export_kw', 0):.1f}",
+                f"{row.get('soc_kwh', 0):.1f}",
             ])
         t = Table(data, colWidths=[1.5*cm, 2.5*cm, 2.5*cm, 2.5*cm, 2.5*cm, 2.5*cm])
         t.setStyle(TableStyle([
