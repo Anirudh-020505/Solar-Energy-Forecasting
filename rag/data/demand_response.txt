@@ -1,0 +1,29 @@
+[DOCUMENT CONTEXT: This document outlines the economic strategies for Demand Response (DR) and Energy Arbitrage in 2026, focusing on how Agentic AI maximizes revenue through market participation and load flexibility.]
+
+# SECTION 1: THE REVENUE STREAMS OF 2026 (ARBITRAGE AND BEYOND)
+[CONTEXT: Defining how solar+battery owners make money in a modern, deregulated market.]
+In 2026, "Saving Money" on electricity is only the first step. The real value lies in "Value Stacking." Value stacking is the simultaneous participation in multiple grid services. The Agentic AI must optimize for: 1. Bill Reduction (via Self-Consumption), 2. Peak Shaving (reducing demand charges), and 3. Grid Services (selling power back during emergencies). The agent uses the "LSTM Forecast" to see the "Peak Solar Window" (11 AM - 3 PM). If the "Real-Time Market" (RTM) price is high, the agent exports; if the price is low (or negative), the agent stores. This "Dynamic Revenue Routing" is the core intelligence of the Milestone 2 assistant.
+
+# SECTION 2: TIME-OF-USE (TOU) TARIFFS AND PEAK-HOUR AVOIDANCE
+[CONTEXT: Navigating complex utility pricing structures to shift loads to the cheapest hours.]
+TOU tariffs in 2026 are highly granular. A typical "Super-Peak" occurs between 5 PM and 9 PM when solar goes offline. The "Off-Peak" occurs at 2 AM (wind peak) and 12 PM (solar peak). The AI Agent's "Scenario Planner" must create a "Load-Shifting Matrix." For example, if a user has an EV and a Heat Pump, the agent should calculate the "Delay Savings." Shifting 40kWh of EV charging from 6 PM to 11 AM could save the user $12.00 per day. The agent must present these "Actionable Savings" in the Streamlit report, providing a clear ROI for the user's investment in automation.
+
+# SECTION 3: VIRTUAL POWER PLANTS (VPP) AND AGGREGATION LOGIC
+[CONTEXT: How small assets join forces to act as a single utility-scale power plant.]
+FERC Order 2222 has enabled the "VPP Revolution." An AI Assistant doesn't just manage one battery; it manages one "node" in a larger VPP. When the "VPP Dispatcher" sends a signal that the grid is stressed, the AI Agent must decide how much power it can "commit." This is the "Commitment Logic." The agent checks the SoC: "I have 8kWh available, I need 3kWh for the house, I can sell 5kWh to the grid for the next 2 hours." If the agent fails to deliver the committed power, the VPP may face "Non-Performance Penalties." Therefore, the agent must build in a "Confidence Buffer" (typically 15%) based on the uncertainty of the solar forecast.
+
+# SECTION 4: DEMAND CHARGE MANAGEMENT FOR COMMERCIAL USERS
+[CONTEXT: Strategies for reducing the expensive "Peak Demand" fees on business utility bills.]
+For commercial users, the "Demand Charge" is often 50% of the total bill. This charge is based on the single highest 15-minute window of electricity use in a month. The Agentic AI uses a "Peak Shaving" algorithm. It sets a "Hard Ceiling" (e.g., 50kW). If the building load spikes to 60kW, the battery immediately discharges 10kW to "shave" the peak. This happens in real-time, independent of the solar forecast. The "Grid Optimizer" report must track the "Highest Shaved Peak" and calculate the "Demand Charge Savings"—often thousands of dollars—to prove the agent's value to the business owner.
+
+# SECTION 5: CRITICAL PEAK PRICING (CPP) AND EMERGENCY EVENTS
+[CONTEXT: Responding to rare, high-stakes grid events where prices can spike to $5,000/MWh.]
+"Critical Peak Pricing" (CPP) events are triggered by the utility during extreme weather. During these 4-hour windows, prices are 10x-50x higher than normal. The Agentic AI must treat a CPP alert as a "High-Priority Node" in the LangGraph. It must "Pre-Charge" the battery to 100% using solar or cheap grid power in anticipation. During the event, the house must go into "Island Lite" mode—shutting down everything except essential loads to maximize the amount of energy exported to the grid. This is "Opportunistic Exporting," and it is often where 30% of a battery's annual revenue is generated.
+
+# SECTION 6: NEGATIVE PRICING AND CURTAILMENT ECONOMICS
+[CONTEXT: What to do when the grid has too much power and prices turn negative.]
+In 2026, "Negative Pricing" is a common result of solar overproduction. If the price is -$0.02/kWh, exporting power costs the owner money. The AI Agent must recognize the "Negative Pivot Point." In this scenario, the agent should: 1. Fill all BESS to 100%, 2. "Supercool" the building (running AC at maximum to store thermal energy), and 3. Finally, "Curtail" (disconnect) the solar if the battery is full. This "Waste-Avoidance" strategy ensures the system never pays the utility to take its clean energy. The "Scenario Planner" in the app should allow users to simulate how many "Negative Hours" they expect in a year.
+
+# SECTION 7: BEHAVIORAL VS. AUTOMATED DEMAND RESPONSE
+[CONTEXT: The role of the human-in-the-loop vs. the autonomous AI agent.]
+While the AI agent is autonomous, it must respect "User Comfort Profiles." Demand Response shouldn't mean a 30°C house. In 2026, the "Agent-User Interaction" is a negotiation. The agent asks (via Streamlit notification): "A high-revenue grid event is starting. Can I raise the AC setpoint by 2°C for $5.00 in credits?" This "Opt-In" logic ensures the RAG-based report reflects both technical optimization and human preferences. The final report should summarize "User-Approved Shifts," showing how much the user's willingness to participate in DR contributed to the overall grid stability and their own wallet.
