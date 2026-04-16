@@ -299,6 +299,12 @@ def main():
 
     # Battery sidebar
     battery_config = _battery_sidebar()
+    config_valid = (
+        battery_config["battery_initial_soc_kwh"]
+        >= battery_config["battery_min_soc_kwh"]
+    )
+    if not config_valid:
+        st.sidebar.error("Initial SoC must be greater than or equal to Min SoC.")
 
     scenario_name = st.sidebar.selectbox(
         "Scenario",
@@ -310,6 +316,10 @@ def main():
 
     # ---- Run agent ----
     if st.sidebar.button("Run Grid Optimizer", type="primary", use_container_width=True):
+        if not config_valid:
+            st.error("Invalid battery configuration. Adjust Initial SoC and Min SoC.")
+            return
+
         graph = get_graph()
 
         initial_state = {
