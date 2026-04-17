@@ -216,6 +216,15 @@ def main():
 
     # Filter to selected keys that were actually run
     active = {k: v for k, v in results.items() if k in selected_keys}
+    missing = [k for k in selected_keys if k not in results]
+    if missing:
+        labels = [SCENARIOS[k]["label"] for k in missing if k in SCENARIOS]
+        st.warning(
+            "Selected scenarios not run yet: "
+            + ", ".join(labels)
+            + ". Click Run All Scenarios to refresh results."
+        )
+
     if not active:
         st.info("Re-run scenarios with the current selection.")
         return
